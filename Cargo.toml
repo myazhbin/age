@@ -80,6 +80,11 @@ base64 = "=0.23.1"
 # crate reproduces both behaviors, so the port keeps the oracle's code path
 # (see crates/age-format/src/bech32.rs).
 
+# zlib inflate for the CCTV vectors stored with `compressed: zlib`
+# (Go: testkit_test.go parseVector). Test-only: decompresses fixtures, never
+# touches real cryptographic paths. miniz_oxide backend (pure Rust).
+flate2 = "=1.1.10"
+
 # --- Recipient primitives (crates/age-recipients; S2/S3) ------------------
 
 # X25519 recipient/identity (Go: x25519.go). The curve25519-dalek family is
