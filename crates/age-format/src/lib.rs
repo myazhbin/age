@@ -24,8 +24,9 @@
 mod quote;
 
 pub mod format;
-// Added in the stream and bech32 commits below (each commit keeps the
-// workspace building): pub mod bech32; pub mod stream;
+pub mod stream;
+// Added in the bech32 commit (each commit keeps the workspace building):
+// pub mod bech32;
 
 // --- Root-package glue (Go: age.go) -------------------------------------
 
