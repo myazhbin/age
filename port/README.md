@@ -50,6 +50,11 @@ Observed via `cargo metadata` on the resolved lockfile (111 packages):
 - `libcrux-ml-kem` carries the widest subtree (build tooling: `bindgen`,
   `cc`, `wasm-bindgen`; formal-methods annotations: `hax-lib`). That is the
   cost of a verified ML-KEM-768 and is watched by the advisory/audit gates.
+- Accepted advisory: RUSTSEC-2026-0173 (unmaintained `proc-macro-error2`)
+  arrives transitively via `libcrux-ml-kem` 0.0.11's hax annotations; no
+  fixed version exists, and it is compile-time tooling, not runtime
+  crypto. Recorded as a dated, reasoned `ignore` in `deny.toml`
+  (2026-10-09); drop it when libcrux stops pulling hax-lib 0.3.7.
 - Duplicate versions in the graph (warn-level in `deny.toml` until the
   surface stabilizes): `hax-lib` 0.3/0.4, `syn` 2/3, `shlex` 1/2.
 - Deliberately **not** pinned yet: `ssh-key` (S3, SSH recipients), a base64
