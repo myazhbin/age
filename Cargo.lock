@@ -21,7 +21,6 @@ name = "age-format"
 version = "0.1.0"
 dependencies = [
  "base64",
- "bech32",
  "chacha20poly1305",
  "hkdf",
  "hmac",
@@ -62,12 +61,6 @@ name = "base64"
 version = "0.23.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5"
-
-[[package]]
-name = "bech32"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "efbd3e1070bbdf4cd88a75264e18e8a26f7cb5c6949eadf0ceb85fb159cf08f8"
 
 [[package]]
 name = "bindgen"

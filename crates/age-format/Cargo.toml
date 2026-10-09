@@ -1,7 +1,7 @@
 # Ports (Go v1.3.2 is the behavioral oracle — product decision, 2026-10-09):
 # root-package glue (age.go), internal/format (header/stanza wire format,
 # header MAC, strict field validation), internal/stream (ChaCha20-Poly1305
-# STREAM payload), internal/bech32 (key-string encodings).
+# STREAM payload), internal/bech32 (key-string encodings, hand-ported).
 # Empty in S0: dependencies are wired and pinned; implementation starts in S1.
 
 [package]
@@ -20,4 +20,3 @@ hkdf = { workspace = true }
 sha2 = { workspace = true }
 hmac = { workspace = true }
 base64 = { workspace = true }
-bech32 = { workspace = true }

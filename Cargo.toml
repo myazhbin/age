@@ -75,9 +75,10 @@ base64 = "=0.23.1"
 
 # Key-string encoding for every HRP the format knows: `age1`,
 # `AGE-SECRET-KEY-1`, `age1pq`, `AGE-SECRET-KEY-PQ-1`, `age1tag`,
-# `AGE-PLUGIN-` (Go: internal/bech32). Owned by age-format so all encodings
-# share one code path; recipients consume it through the format crate.
-bech32 = "=0.12.0"
+# `AGE-PLUGIN-` (Go: internal/bech32) is a hand port in age-format: Go drops
+# the BIP173 length limit and ASCII-folds the data part, and no published
+# crate reproduces both behaviors, so the port keeps the oracle's code path
+# (see crates/age-format/src/bech32.rs).
 
 # --- Recipient primitives (crates/age-recipients; S2/S3) ------------------
 
