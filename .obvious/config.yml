@@ -1,0 +1,11 @@
+# .obvious/config.yml — repository policy for agent workflows.
+# Auto-detected from GitHub repo settings (myazhbin/age) on 2026-10-09.
+
+branches:
+  default: main
+
+merge:
+  # GitHub settings: merge commit, squash, and rebase are all allowed.
+  # Squash is the conventional default for agent-authored PRs.
+  method: squash
+  requireHumanMerge: true
